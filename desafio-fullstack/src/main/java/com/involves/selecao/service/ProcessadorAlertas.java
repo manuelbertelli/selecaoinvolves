@@ -19,12 +19,12 @@ public class ProcessadorAlertas {
 
 	@Autowired
 	private AlertaGateway gateway;
-	
+
 	public void processa() throws IOException {
-		URL url = new URL("http://selecao-involves.agilepromoter.com/pesquisas");
+		URL url = new URL("https://selecao-involves.agilepromoter.com/pesquisas");
 		HttpURLConnection con = (HttpURLConnection) url.openConnection();
 		con.setRequestMethod("GET");
-		
+
 		BufferedReader in = new BufferedReader(
 		  new InputStreamReader(con.getInputStream(), "UTF-8"));
 		String inputLine;
